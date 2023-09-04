@@ -1,8 +1,11 @@
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import { Login } from './componentes/Login/login';
 
 function App() {
   return (
-    <p>Trybetunes</p>
+    <Routes>
+      <Route path="/" element={ <Login /> } />
+    </Routes>
   );
 }
 
