@@ -6,7 +6,7 @@ type TrackType = {
   trackId: number
 };
 
-export function CheckboxWithImage({ trackId }: TrackType) {
+export function MusicCard({ trackId }: TrackType) {
   const [isChecked, setIsChecked] = useState(false);
 
   const toggleCheckbox = () => {
@@ -18,11 +18,10 @@ export function CheckboxWithImage({ trackId }: TrackType) {
       <input
         onChange={ toggleCheckbox }
         type="checkbox"
-        alt="favorite"
       />
       <img
         src={ isChecked ? checkedImage : uncheckedImage }
-        alt={ isChecked ? 'favorite' : '' }
+        alt="favorite"
       />
     </label>
   );

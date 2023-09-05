@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { AlbumType, SongType } from '../../types';
 import getMusics from '../../services/musicsAPI';
 import { MsgLoading } from '../msgloading/msgloading';
-import { CardMusic } from './cardMusic';
+import { CardMusic } from './MusicCard';
 
 export function Album() {
   const [songList, setSongList] = useState<[...SongType[]]>();

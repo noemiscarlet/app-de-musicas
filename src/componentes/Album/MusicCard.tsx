@@ -1,5 +1,5 @@
 import { SongType } from '../../types';
-import { CheckboxWithImage } from './checkbox';
+import { MusicCard } from './checkbox';
 
 type CardMusicProps = {
   songs: SongType[] | undefined;
@@ -20,7 +20,7 @@ export function CardMusic({ songs }: CardMusicProps) {
         <code>audio</code>
         .
       </audio>
-      <CheckboxWithImage trackId={ trackId } />
+      <MusicCard trackId={ trackId } data-testid={ `checkbox-music-${trackId}` } />
     </div>
   ));
 }
