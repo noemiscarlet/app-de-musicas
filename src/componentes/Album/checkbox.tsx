@@ -14,17 +14,15 @@ export function CheckboxWithImage({ trackId }: TrackType) {
   };
 
   return (
-    <label>
-      <label>
-        <input
-          onChange={ toggleCheckbox }
-          type="checkbox"
-          data-testid={ `checkbox-music-${trackId}` }
-        />
-      </label>
+    <label data-testid={ `checkbox-music-${trackId}` }>
+      <input
+        onChange={ toggleCheckbox }
+        type="checkbox"
+        alt="favorite"
+      />
       <img
         src={ isChecked ? checkedImage : uncheckedImage }
-        alt="favorite"
+        alt={ isChecked ? 'favorite' : '' }
       />
     </label>
   );
